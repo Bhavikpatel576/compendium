@@ -1,0 +1,29 @@
+<% provide(:title, "Edit Profile Settings") %>
+<h1>Sign Up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <!-- name box -->
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <!-- email box -->
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+      <!-- password box -->
+      <%= f.label :password %>
+      <%= f.text_field :password, class: 'form-control' %>
+      <!-- password confirmation box -->
+      <%= f.label :password_confirmation %>
+      <%= f.text_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+     <% end %>
+
+     <div class="gravatar_edit">
+       <%= gravatar_for @user %>
+       <a href ="http://gravatar.com/emails" target="_blank">change</a>
+     </div>
+   </div>
+</div>

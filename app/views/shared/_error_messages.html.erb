@@ -1,0 +1,17 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@user.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<!-- # <@suser.errors.any> tag : if there are any user errors  render the following html
+#ul defines an unordered list 
+#li defines a list term
+#the pluralize method takes a number and converts the word to its plural form based off the number passed (if > 1 = plural form) -->
