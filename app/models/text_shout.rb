@@ -1,0 +1,2 @@
+class TextShout < ApplicationRecord
+end
